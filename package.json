@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate",
-  "version": "1.2.0",
+  "name": "logger",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
