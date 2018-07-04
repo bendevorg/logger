@@ -6,5 +6,6 @@ const path = require('path');
 const controllers = retrieveControllers(path.basename(__filename).split('.')[0]);
 //  Auth API
 router.post('/new', controllers.newLog);
+router.get('/', controllers.retrieveLogs);
 
 module.exports = router;
