@@ -49,7 +49,7 @@ db.on('reconnected', function() {
 let models_path = process.cwd() + '/server/models';
 
 fs.readdirSync(models_path).forEach(function(file) {
-  if (file.indexOf('.js') && !file.indexOf('database.js')) {
+  if (file.indexOf('.js') && file !== 'database.js') {
     require(models_path + '/' + file);
   }
 });

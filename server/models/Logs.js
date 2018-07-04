@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const LogSchema = new Schema({
@@ -23,4 +23,4 @@ const LogSchema = new Schema({
   timestamp: { type: Date, default: Date.now }
 });
 
-mongoose.model("Log", LogSchema);
+mongoose.model('Logs', LogSchema);
