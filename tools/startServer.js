@@ -12,17 +12,12 @@ const SSL = setupSSL();
 
 if (SSL) {
   const https = require('https');
-  https
-    .createServer(SSL, app)
-    .listen(PORT, () => {
-      console.info('🌎  Server is listening on port %s with SSL.', PORT);
-    });
+  https.createServer(SSL, app).listen(PORT, () => {
+    console.info('🌎  Server is listening on port %s with SSL.', PORT);
+  });
 } else {
   app.listen(PORT, error => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.info('🌎  Server is listening on port %s.', PORT);
-    }
-  });  
+    if (error) console.log(error);
+    else console.info('🌎  Server is listening on port %s.', PORT);
+  });
 }
