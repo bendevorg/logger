@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: ['http://localhost:3339'],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
+    credentials: true,
   })
 );
 app.use(router);
