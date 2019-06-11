@@ -3,7 +3,7 @@ const LogsModel = mongoose.model('Logs');
 
 module.exports = (req, res) => {
   const { amount, offset } = req.query;
-  console.log({ amount, offset });
+
   LogsModel
     .find({})
     .sort({ 'req.date': -1 })

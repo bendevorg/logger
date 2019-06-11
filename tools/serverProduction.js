@@ -15,8 +15,8 @@ app.use(
   cors({
     origin: [`http://${process.env.FRONTEND_HOST}`,
       `https://${process.env.FRONTEND_HOST}`,
-      `http://${process.env.BACKEND_HOST}`,
-      `https://${process.env.BACKEND_HOST}`
+      `http://${process.env.GATEWAY_HOST}`,
+      `https://${process.env.GATEWAY_HOST}`
     ],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
     credentials: true
