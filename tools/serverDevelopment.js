@@ -8,7 +8,7 @@ const express = require('express');
 const router = require('../server/core/router.js');
 const cors = require('cors');
 const morgan = require('morgan');
-const logger = require('./logger');
+// const logger = require('./logger');
 const app = express();
 
 app.use(
@@ -19,7 +19,7 @@ app.use(
   })
 );
 app.use(router);
-app.use(logger.errorHandler());
+// app.use(logger.errorHandler());
 app.use(morgan('tiny'));
 
 module.exports = app;

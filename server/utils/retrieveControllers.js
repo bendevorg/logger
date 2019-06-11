@@ -3,7 +3,7 @@
  * @module utils/retrieveControllers
  */
 const fs = require('fs');
-const logger = require('../../tools/logger');
+// const logger = require('../../tools/logger');
 
 /**
  * Retrieve controllers
@@ -24,7 +24,7 @@ module.exports = filename => {
         controllers[file.split('.')[0]] = require(controllersPath + '/' + file);
     });
   } catch (err) {
-    logger.error(err);
+    // logger.error(err);
   }
 
   return controllers;
